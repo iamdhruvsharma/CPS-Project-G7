@@ -38,10 +38,10 @@ def trigger_water_pump(seconds=2):
 
 def push_sensor_data():
     connection = connector.connect(
-        host='ec2-54-165-234-73.compute-1.amazonaws.com',
-        user='username',
-        password='Password@1',
-        database='cps_project_g7'
+        host='',
+        user='',
+        password='',
+        database=''
     )
     cursor = connection.cursor()
     soil_moisture = get_soil_moisture_percentage()
@@ -62,10 +62,10 @@ def push_sensor_data():
 
 def fetch_latest_sensor_data():
     connection = connector.connect(
-        host='ec2-54-165-234-73.compute-1.amazonaws.com',
-        user='username',
-        password='Password@1',
-        database='cps_project_g7'
+        host='',
+        user='',
+        password='',
+        database=''
     )
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM g7_plant_sensor_data WHERE inserted_timestamp = (SELECT MAX(inserted_timestamp) FROM g7_plant_sensor_data)")
