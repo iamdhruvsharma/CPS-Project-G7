@@ -1,10 +1,10 @@
 import mysql.connector as connector
 
 connection = connector.connect(
-    host='ec2-54-165-234-73.compute-1.amazonaws.com',
-    user='username',
-    password='Password@1',
-    database='cps_project_g7'
+    host='',
+    user='',
+    password='',
+    database=''
     )
 
 cursor = connection.cursor()
