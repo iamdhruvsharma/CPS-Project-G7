@@ -6,9 +6,8 @@ bot = telebot.TeleBot(bot_token)
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
-    chat_id = message.chat.id
-    print("chat ", chat_id)
+    chat_id = 5980789960
+    bot.send_message(chat_id, "Hello")
 
 bot.polling()
 
-chat_id = 5980789960
